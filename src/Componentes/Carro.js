@@ -68,6 +68,8 @@ class Carro extends React.Component {
                                 </tr>
                             </tfoot>
                         </Table>
+                        <Button color="primary">Comprar</Button>
+                        <Button color="danger">Cancelar</Button>
                     </PopoverBody>
                 </Popover>
             </div>
