@@ -1,15 +1,18 @@
 import React from 'react';
 import  {Button, CardImg, Container, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap'
 import './FichaProducto.css';
+import {listaCarrito} from '../listaCarrito.json';
 
 class FichaProducto extends React.Component{
     constructor(props){
         super();
         this.state ={
-            modal:false
+            modal:false,
+            listaCarrito
         };
 
         this.toggle = this.toggle.bind(this);
+        this.agregarCarrito = this.agregarCarrito.bind(this);
         console.log(props);
     }
 
@@ -17,6 +20,16 @@ class FichaProducto extends React.Component{
         //console.log(this.props);
         this.setState(prevSatate => ({
             modal: !prevSatate.modal
+        }));
+    }
+
+    agregarCarrito(){
+        listaCarrito.push({
+            "titulo": this.props.props.titulo,
+            "precio":this.props.props.precio
+        });
+        this.setState(prevState => ({
+            modal: !prevState.modal
         }));
     }
 
@@ -33,7 +46,7 @@ class FichaProducto extends React.Component{
                         <p>Hay <b>{this.props.props.stock}</b>.Unidades de este producto disponibles.</p>
                     </ModalBody>
                     <ModalFooter className='modalFooter'>
-                        <Button color="primary" onClick={this.toggle}>Agregar al Carrito</Button>
+                        <Button color="primary" onClick={this.agregarCarrito}>Agregar al Carrito</Button>
                         <Button color="secondary" onClick={this.toggle}>Volver Atrás</Button>
                     </ModalFooter>
                  </Modal>

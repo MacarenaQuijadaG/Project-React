@@ -3,7 +3,8 @@ import './App.css';
 import Producto from './Componentes/Producto';
 import {Container,Row} from'reactstrap';
 import Navegacion from './Componentes/Navegacion';
-import {listaProductos} from './listaProductos.json'
+import {listaProductos} from './listaProductos.json';
+
 
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
 
     this.state = {
       listaProductos
+
     };
   }
 
