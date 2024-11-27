@@ -1,26 +1,29 @@
 import React from 'react';
-import { Button, CardText, CardSubtitle, CardTitle, CardImg, Card, Col, CardBody } from 'reactstrap';
+import {CardText, CardSubtitle, CardTitle, CardImg, Card, Col, CardBody } from 'reactstrap';
 import './Producto.css';
+import FichaProducto from './FichaProducto';
 
-function Producto(props) {
+//function Producto(props) {
+class Producto extends React.Component{
+    render(){
     return (
         <Col sm="4">
             <Card className="Card" body outline color="primary">
-                <CardImg src={props.imagen} alt="Producto" />
+                <CardImg src={this.props.imagen} alt="Producto" />
                 <CardBody>
-                    <CardTitle>{props.titulo}</CardTitle>
+                    <CardTitle>{this.props.titulo}</CardTitle>
                     <CardSubtitle>
-                        <b>Valor:</b>{props.precio}
+                        <b>Valor:</b>{this.props.precio}
                     </CardSubtitle>
                     <CardText>
-                        {props.descripcion}
+                        {this.props.descripcion}
                     </CardText>
-                    <Button className="button">Comprar</Button>
-                    <Button className="button">Ver Ficha</Button>
+                  <FichaProducto props={this.props}/>
                 </CardBody>
             </Card>
         </Col>
     );
+}
 }
 
 export default Producto;

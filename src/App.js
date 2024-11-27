@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 import Producto from './Componentes/Producto';
-import {container,Row} from'reactstrap';
+import {Container,Row} from'reactstrap';
+import Navegacion from './Componentes/Navegacion';
 
-function App() {
+class App extends React.Component {
+  render(){
   return (
-    <container>
+    <Container>
+      <Navegacion titulo="Carro de compras"/>
       <Row>
           <Producto 
             titulo="Hadphones Black and Blue" 
@@ -50,8 +53,9 @@ function App() {
             precio= "120.000"
           />
       </Row>
-    </container>
+    </Container>
   );
+}
 }
 
 export default App;
