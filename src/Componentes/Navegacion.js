@@ -1,5 +1,6 @@
-import React from "react";
+import React from 'react';
 import { Navbar, NavbarBrand, NavLink, Nav, NavItem, } from "reactstrap";
+import Carro from './Carro'
 
 
 class Navegacion extends React.Component {
@@ -17,6 +18,9 @@ class Navegacion extends React.Component {
                         </NavItem>
                         <NavItem>
                             <NavLink href="/">Contactanos</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <Carro/>
                         </NavItem>
                     </Nav>
                 </Navbar>

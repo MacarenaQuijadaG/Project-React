@@ -25,5 +25,4 @@ class Producto extends React.Component{
     );
 }
 }
-
 export default Producto;

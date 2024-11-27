@@ -30,6 +30,7 @@ class FichaProducto extends React.Component{
                         <CardImg src = {this.props.props.imagen}/>
                         {this.props.props.descripcion}
                         <p>Este producto tiene un Valor de:$ <b>{this.props.props.precio}</b>. Pesos</p>
+                        <p>Hay <b>{this.props.props.stock}</b>.Unidades de este producto disponibles.</p>
                     </ModalBody>
                     <ModalFooter className='modalFooter'>
                         <Button color="primary" onClick={this.toggle}>Agregar al Carrito</Button>
