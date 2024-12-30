@@ -191,8 +191,3 @@ render() {
 
 ![Captura de pantalla (27)](https://github.com/user-attachments/assets/a4ff1d9a-063f-4847-aed7-a9b8b80905b6)
 
----
-
-## 📜 **Licencia**
-
-Este proyecto está bajo la licencia MIT. ¡Eres libre de usarlo y modificarlo! ✨
